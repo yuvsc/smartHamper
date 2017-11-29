@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "buoyant-arcanum-151300",
+  "private_key_id": "001b7770899b665537c64eff1396d5bebe24b30e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCzJo19NYR4g7J3\n5YkG8KDIjiEz0l2E6cVBs8tn0+R0kIvPNvO4NcsZ2GPtmf2LYZv/2IZ374KzenVu\niYpe4uw4JV9EdC9LDHv+F2yzHopMEU7YnEJXNhdTpjoX5YuCpNNF3rEsTNyU2Gmz\ndQAtjH5d873XG5mRcx7uiEpK5RipHL5HUi1GRmsxxaxactvFik/PctYkg4G1Liut\nhCEp1n/ULIzxDyvhVRz2XGpHKzQT1btnhfxkrUtFZzqwfUEdTV953wsCpvrkdPsi\n37Lwlg9I2tR+qGdIGND3WH1BhlFWh4x3JfG8ETeGBcZVTEd90C7ktlT4shPF1rx5\nwbd4HwD1AgMBAAECggEALJkAmIap3WF1nHzW7ZQaBotBTzgDgWq7qRVD4etBIFZ6\ng4FrzzQPBTZV/Ah9coUAU4LYyMMmX50w3i1dtazafsio7G7a9h0bwd+ddwK3jWOy\no+BUcIb97BxBsoC5h/KVyLs9Emjo8aHlQGA0ROKIc8WRgRr1Eh0dOmbRzc614qUi\nqs0TfoKv8xA9eUAAS4Q8cvCJjXpfq5K54IHATalgHpbWXlIe4+JTI8DQs80RyHZU\nacyz8sJ+wkz70y6uVwzEF6+xZAUyXbgqCIJT9scz0tOHK/hlNPY5D1v1MSls/yEO\n0Ban7dnYyH/FoofD6KmzpgLpIjng+g/EJYic0dDSEQKBgQDuQgNBekKwc/sXt6Br\nv5aQthREBYU/YLWnuLVxKgxRQPOdzJxUSrM4jCt/A/MBvN6dmgTaGd+UU/anBuG0\n7YMg7UyStPi2iA1rQMkz7J2Kp8b0gaB4CxdQ95lzDM/mcIBib47cTbSUdi+ng/Xp\nvygHWEVeW3UakRti8BgjpnPqMQKBgQDAfcJHb9NAcnZQTu3DaRvpssKZYsrqLk2h\nwR4+17MWdkXINrGgrjOI6N4q5pzn+V9lIitHZxuRG1Dq51dSRjQSfRaS76Uq+EQW\nfQq3YIgBew5T/o9SBXautPULb5CgX6uRJpW+6bgCZJqe5rfmhfFYf43IN3zTfCeo\n5lXQxejOBQKBgF2lZqAyzMmMHJIa45vWJvjkCB0gSlo5ycyNhgtfqo25SMeqJ3ve\nDIlaVrJKvBXfxWQOqH+NEdq8EcNeqhIyFIs5mhJDvUoJObUBNtQI2XcpMMLjvE3S\nliyF1TNqQsDhUSTfkjg29pYvydU+wcZJExOn90P6EJILnMcLdYF1qDPRAoGACYBr\nraEMeXrs8ivjOqkekpubVXz17TdZ56kjuBBnq60s5qQkgnz22EQ+azm09xJtLg3Q\nuxaQ2snRZbcDrXD/swXvrlMcARH+Mmn7tG+UZxZO78B6DJ9ua1NNYUIhjnkKfAC+\nlYzt41hZ9YwH+d4UuryZIA/1Hm9bec/c3pBWXI0CgYBxuRG8oTdJr/XoQcUE1tOJ\nogw+AYitCXQbOHSEFUOsz7xQXsnxMkFcLI4w4JXo3p+GjibtQ5KKYrirTnwHu6sk\nTU3HfpedptkgtMR3DS5GUx+MKwHIRF7kEKNCsHbuLjuIgAWMV5K4033P8GFFwBX2\nW9xr/obaH+DeT6p4RiXxVg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "smartwatch@buoyant-arcanum-151300.iam.gserviceaccount.com",
+  "client_id": "108032933066950071548",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/smartwatch%40buoyant-arcanum-151300.iam.gserviceaccount.com"
+}
