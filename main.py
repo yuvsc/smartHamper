@@ -1,32 +1,42 @@
 from range_sensor import *
 from subprocess import call
 import image_capture
+import json
+import requests
+import servo
+from RPi import GPIO
+
+GPIO.setmode(GPIO.BOARD)
+
+FREQ1 = 50
+FREQ2 = 50
+
 
 def main():
+    global FREQ1, FREQ2
     range_init()
+    pwm1, pwm2 = servo.servo_init(FREQ1, FREQ2)
     while(1):
-        dist = get_dist()
-        print dist
-        if dist < 30:
-            print 'Interrupt'
-            clss = classify_laundry()
-            # <MOVE MOTORS>
-            print 'sleeping...'
-            break
-            time.sleep(5)
+        try:
+            dist = get_dist()
+            print dist
+            if dist < 30:
+                #call(['./take_pic.sh'])
+                vect = image_capture.get_feature_vector('image.jpg')
+                print vect
+                clss = classify(vect)
+                # Move laundry into correct bin
+                print 'Moving laundry to ' + str(clss) + '\'s bin'
+                servo.moveLaundry(clss, pwm1, pwm2)           
+        except KeyboardInterrupt:
+            GPIO.cleanup()
 
-    # Never gets called
-    GPIO.cleanup()
 
-def classify_laundry():
-    # Take picture
-    call(['./take_pic.sh'])
+def classify(vect):
+    url = 'http://34.210.106.90/test?msg=' + json.dumps([vect])
+    response = requests.get(url)
 
-    feature_vector = image_capture.get_feature_vector('image.jpg')
-    print feature_vector
+    return response.text
 
-    # Pass into SVM
-    clss = 0
-    return clss 
 # Call main()
 main()

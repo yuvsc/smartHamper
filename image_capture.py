@@ -63,16 +63,17 @@ def get_feature_vector(path):
     # feature_vector = [label_val, R, G, B]
 
     # Get label_val
+    label_val = 0
     if 't shirt' in labels or 'shirt' in labels or 'sleeve' in labels or 'top' in labels:
         label_val = 1*LABEL_WEIGHT 
-    elif 'trousers' in labels or 'denim' in labels or 'jeans' in labels:
+    if 'trousers' in labels or 'denim' in labels or 'jeans' in labels or 'tartan' in labels:
         label_val = 2*LABEL_WEIGHT
-    elif 'brand' in labels or 'text' in labels or 'font' in labels:
+    if 'brand' in labels or 'text' in labels or 'font' in labels:
         label_val = 3*LABEL_WEIGHT
-    else:
-        label_val = 0
 
     r, g, b = colors[0]
+
+    print(labels)
 
     return [label_val, r, g, b]
 
