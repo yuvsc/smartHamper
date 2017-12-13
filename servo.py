@@ -12,14 +12,17 @@ def servo_init(freq1=50, freq2=50):
 
     pwm1.start(0)
     pwm2.start(0)
- 
+
+    setAngle(90,pwm2)
+    setAngle(90,pwm1)
+
     return pwm1, pwm2
 
 def moveLaundry(clss, pwm1, pwm2):
     if clss == 0:
         setAngle(120, pwm1)
     elif clss == 1:
-        setAngle(120, pwm2)
+        setAngle(110, pwm2)
     elif clss == 2:
         setAngle(40, pwm1)
 
@@ -36,20 +39,12 @@ def setAngle(angle,pwm):
     GPIO.output(03, False)
     pwm.ChangeDutyCycle(0)
 
-def test():
+def reset_servo():
     pwm1, pwm2 = servo_init()
 
-    SetAngle(0,pwm1)
-    SetAngle(0,pwm2)
+    setAngle(90,pwm2)
+    setAngle(90,pwm1)
 
-    SetAngle(100,pwm1)
 
-    SetAngle(100,pwm2)
-
-    SetAngle(0,pwm1)
-    SetAngle(0,pwm2)
-
-    pwm1.stop()
-    pwm2.stop()
-
-    GPIO.cleanup()
+if __name__ == '__main__':
+    reset_servo()

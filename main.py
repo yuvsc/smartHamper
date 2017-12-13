@@ -3,7 +3,7 @@ from subprocess import call
 import image_capture
 import json
 import requests
-import servo
+import servo 
 from RPi import GPIO
 
 GPIO.setmode(GPIO.BOARD)
@@ -20,8 +20,8 @@ def main():
         try:
             dist = get_dist()
             print dist
-            if dist < 30:
-                #call(['./take_pic.sh'])
+            if dist < 50:
+                call(['./take_pic.sh'])
                 vect = image_capture.get_feature_vector('image.jpg')
                 print vect
                 clss = classify(vect)

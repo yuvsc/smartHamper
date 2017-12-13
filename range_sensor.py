@@ -3,6 +3,7 @@ import time
 
 TRIG = 16 #23 
 ECHO = 18 #24
+GPIO.setmode(GPIO.BOARD)
 
 def range_init():
     GPIO.setup(TRIG,GPIO.OUT)
