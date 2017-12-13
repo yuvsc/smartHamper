@@ -32,4 +32,10 @@ def get_dist():
 
     return distance
 
+if __name__ == "__main__":
+    range_init()
+    while 1:
+        print(get_dist())
+
+
 

@@ -20,7 +20,7 @@ def main():
         try:
             dist = get_dist()
             print dist
-            if dist < 50:
+            if dist < 100:
                 call(['./take_pic.sh'])
                 vect = image_capture.get_feature_vector('image.jpg')
                 print vect
