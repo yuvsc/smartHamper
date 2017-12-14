@@ -1,0 +1,300 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Columbia University EECS E4764 IoT Project Report #0</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<img style="height: 80px" src="images/smartHamperLogo.PNG" alt="" />
+							<!-- <span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span> -->
+							<h1 id="title">SmartHamper</h1>
+							<p>Columbia University <br>
+								EECS E4764 Fall'17 Internet of Things<br>
+								Intelligent and Connected Systems<br>
+								Team 11 Project Report
+							</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<!--
+
+								Prologue's nav expects links in one of two formats:
+
+								1. Hash link (scrolls to a different section within the page)
+
+								   <li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
+
+								2. Standard link (sends the user to another page/site)
+
+								   <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
+
+							-->
+							<ul>
+								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Abstract</span></a></li>
+								<li><a href="#motivation" id="motivation-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Motivation</span></a></li>
+								<li><a href="#system" id="system-link" class="skel-layers-ignoreHref"><span class="icon fa-th">System</span></a></li>
+								<li><a href="#results" id="results-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Results</span></a></li>
+								<li><a href="#references" id="references-link" class="skel-layers-ignoreHref"><span class="icon fa-th">References</span></a></li>
+								<li><a href="#team" id="team-link" class="skel-layers-ignoreHref"><span class="icon fa-user">Our Team</span></a></li>
+								<li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Contact</span></a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+							<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/_AlcRoqS65E" frameborder="0" allowfullscreen></iframe>
+	
+								<h2 class="alt">SmartHamper</h2>
+								<p>Are you tired of shifting through your entire family’s laundry to find your clothes? Or finding your favorite shirt in your roommate’s closet?  With SmartHamper, these are problems of the past!</p>
+								<!--<p>(Abstract here)</p>-->
+								
+
+							<footer>
+								<a href="#motivation" class="button scrolly">Motivation</a>
+							</footer>
+
+						</div>
+					</section>
+
+				<!-- Portfolio -->
+					<section id="motivation" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Motivation</h2>
+							</header>
+
+							<p align="left">SmartHamper is a great way to divide laundry among family members or roommates.  The system identifies the owner of a given piece of clothing, maps it to its owner, and automatically sorts it into the appropriate hamper.  So say goodbye to struggling to identify clothing, or finding your shirts in your roommates hamper!</p>
+
+
+
+						</div>
+					</section>
+					
+					
+					<section id="system" class="three">
+						<div class="container">
+
+							<header>
+								<h2>System</h2>
+							</header>
+							
+							<!--<p align="left">Remember to use combination of descriptions, photos, and figures</p>-->
+							
+							<h3 align="left">Architecture</h3>
+							<article class="item">
+								<a href="#" class="image fit"><img src="images/diagram.jpg" alt="" /></a>
+								<header>
+									<h3>Block Diagram</h3>
+								</header>
+							</article>
+
+							<p align="left">Above you can see the block diagram of the working system.</p>
+							
+							
+							<h3 align="left">Technical Components</h3>
+
+							<ul align="left">
+								<li>Raspberry Pi 3</li>
+								<li>IR Sensor (HC-SR04 Ultrasonic Sensor)</li>
+								<li>2 x Servo Motors</li>
+								<li>USB Web Camera</li>
+							</ul>
+							
+							<h3 align="left">Prototype</h3>
+
+							<p align="left">The prototype consisted of the IR Sensor measuring distance. When the distance is less than 100, the camera takes a snapshot of the piece of clothing displayed by the user. The snapshot gets transmitted to the Google Cloud Vision API from the Pi and returns labels of the image as well as RGB values. A vector gets created in the form of <L,R,G,B>, where L is a label found matching t-shirt, shirt, sleeve, font, or text. R, G, and B correspond to the most common RGB value in the image. The vector gets sent from the Pi to the server. Then the trained SVM uses the created vector to predict which piece of clothing this item is. Once the piece of clothing is identified, it is matched with its' owner using the MongoDb entries. The server then returns the class number of the owner to the Pi, and the Pi turns its motors accordingly to move the piece of clothing to the correct location.</p>
+							
+							
+							
+						</div>
+					</section>
+					
+					
+					<section id="results" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Results</h2>
+							</header>
+
+							<!--<p align="left">Remember to use figures to help illustrate results</p>-->
+
+							<p align="left">SVM was able to determine eight different pieces of clothing. This included two pants, four unlabeled shirts, and 2 labeled shirts.</p>
+							<p align="left">The SVM had an accuracy score of 78% using cross-validation.</p>
+							<p align="left">Server running on EC2 instance was able to send the Pi the correct bin to put the piece of clothing in.</p>
+
+							<!--<article class="item">
+								<a href="#" class="image fit"><img src="images/diagram.jpg" alt="" /></a>
+								<header>
+									<h3>Caption</h3>
+								</header>
+							</article>-->
+							
+							
+						</div>
+					</section>
+					
+					<section id="references" class="three">
+						<div class="container">
+
+							<header>
+								<h2>References</h2>
+							</header>
+
+							<p align="left">http://www.sciencedirect.com/science/article/pii/S0141118708000679
+											https://kddfashion2016.mybluemix.net/kddfashion_finalSubmissions/Deep%20Learning%20for%20Fast%20and%20Accurate%20Fashion%20Item%20Detection.pdf
+											https://link.springer.com/content/pdf/10.1007%2F978-3-662-48570-5_12.pdf
+											http://cs231n.stanford.edu/reports/2016/pdfs/286_Report.pdf
+											https://www.researchgate.net/publication/308873341_Recognizing_clothes_patterns_and_colours_for_blind_people_using_neural_network
+											http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6887366
+							</p>
+
+						</div>
+					</section>
+					
+
+				<!-- About Me -->
+					<section id="team" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Our Team</h2>
+							</header>
+
+							<!-- <a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a> -->
+
+
+							<div class="row">
+								<div class="4u 12u$(mobile)">
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/YuvalPic.jpg" alt="" /></a>
+										<header>
+											<h3>Yuval Schaal</h3>
+											<p>Yuval Schaal is a first semester MS student studying Computer Engineering at Columbia University in the city of New York at the Fu Foundation's School of Engineering and Applied Sciences. For this project, Yuval worked on the AWS EC2 instance and MongoDb collaboration using PyMogno, as well as the server on the Raspberry Pi. Find out more about Yuval's projects at <a href="https://yuvsc.github.io/">yuvalschaal.com</a></p>
+										</header>
+									</article>
+								</div>
+								<div class="4u 12u$(mobile)">
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/JonPic.jpg" alt="" /></a>
+										<header>
+											<h3>Jonathan Herman</h3>
+											<p>Jonathan Herman is a senior year undergraduate student studying Computer Science at Columbia University in the city of New York at the Fu Foundation's School of Engineering and Applied Sciences. For this project, Jonathan worked extensively on training the SVM classifiers, as well as integrating with the Google Cloud Vision API.</p>
+										</header>
+									</article>
+								</div>
+								<div class="4u$ 12u$(mobile)">
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/XinjiePic.jpg" alt="" /></a>
+										<header>
+											<h3>Xinjie Wen</h3>
+											<p>Xinjie Wen is a first semester MS student studying Electrical Engineering at olumbia University in the city of New York at the Fu Foundation's School of Engineering and Applied Sciences. For this project, Xinjie worked on the android application which communicated with the Python server on the AWS EC2 instance as well as the Mongodb database.</p>
+										</header>
+									</article>
+								</div>
+							</div>
+
+						</div>
+					</section>
+
+				<!-- Contact -->
+					<section id="contact" class="four">
+						<div class="container">
+
+							<header>
+								<h2>Contact</h2>
+							</header>
+
+							<p align="left">
+								<strong>Yuval Schaal: </strong>ys3055@columbia.edu</br>
+								<strong>Jonathan Herman: </strong>jsh2201@columbia.edu </br>
+								<strong>Xinjie Wen: </strong>xw2507@columbia.edu </br>
+							</br>
+								<strong>Columbia University </strong><a href="http://www.ee.columbia.edu">Department of Electrical Engineering</a><br>
+								<!-- <strong>Class Website:</strong>
+									<a href="https://edblogs.columbia.edu/eecse4764-001-2016-3/">Columbia University EECS E4764 Fall '17 IoT</a></br> -->
+								<strong>Instructor:</strong> <a href="http://fredjiang.com/">Professsor Xiaofan (Fred) Jiang</a>
+							</p>
+							
+
+							<!-- <form method="post" action="#">
+								<div class="row">
+									<div class="6u 12u$(mobile)"><input type="text" name="name" placeholder="Name" /></div>
+									<div class="6u$ 12u$(mobile)"><input type="text" name="email" placeholder="Email" /></div>
+									<div class="12u$">
+										<textarea name="message" placeholder="Message"></textarea>
+									</div>
+									<div class="12u$">
+										<input type="submit" value="Send Message" />
+									</div>
+								</div>
+							</form> -->
+
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; IoT Project | All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollzer.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
